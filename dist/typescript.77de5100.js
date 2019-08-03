@@ -121,6 +121,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 console.log('Hello world!');
 var isOpen = false;
 var myName = 'Sean';
+var myAge = 25;
+var myList = [0, 1, 2];
+var me = ['Sean', 25, true];
+var Job;
+
+(function (Job) {
+  Job[Job["WebDev"] = 0] = "WebDev";
+  Job[Job["WebDesigner"] = 1] = "WebDesigner";
+  Job[Job["PM"] = 2] = "PM";
+})(Job || (Job = {}));
+
+var job = Job.WebDev;
+var phone = 'iPhone 7+';
+var tablet = 2;
 },{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
