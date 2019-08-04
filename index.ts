@@ -20,3 +20,18 @@ const job: Job = Job.WebDev;
 
 const phone: any = 'iPhone 7+';
 const tablet: any = 2;
+
+// Functions in TypeScript
+// ? for optional params
+
+// const sayWord = (word?: string): string => {
+//   console.log(word || 'hello');
+//   return word || 'hello';
+// };
+
+const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
+  console.log(otherStuff);
+  return word;
+};
+
+sayWord('Sean', 'Wes');
