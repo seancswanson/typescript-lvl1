@@ -125,6 +125,7 @@ var tablet = 2;
 //   console.log(word || 'hello');
 //   return word || 'hello';
 // };
+// String or 'Hello'
 var sayWord = function sayWord(word) {
     if (word === void 0) {
         word = 'Hello';
@@ -137,7 +138,32 @@ var sayWord = function sayWord(word) {
     return word;
 };
 sayWord('Sean', 'Wes');
-},{}],6:[function(require,module,exports) {
+// Implicit types:
+// Typescript infers type.
+var newName = 'Sean Swan';
+newName = 'Cinder Momo';
+// newName = 2;
+// newName = false;
+// console.log(newName);
+// Gets implicit type from the variables first declaration.
+// Getting value from latest newName
+var newNameTwo = newName;
+// newNameTwo = 10;
+// Union types with | split between multiple types
+var makeMargin = function makeMargin(x) {
+    return "margin: " + x + "px";
+};
+makeMargin(10);
+makeMargin('10');
+makeMargin(false);
+// Null types
+var cat = 'Snowy';
+cat = null;
+cat = 'Snowy';
+cat = undefined;
+cat = 12;
+cat = false;
+},{}],3:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -166,7 +192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60599' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53544' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -307,5 +333,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[6,4], null)
+},{}]},{},[3,4], null)
 //# sourceMappingURL=/typescript.fcfa5a15.map

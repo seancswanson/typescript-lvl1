@@ -29,9 +29,41 @@ const tablet: any = 2;
 //   return word || 'hello';
 // };
 
+// String or 'Hello'
 const sayWord = (word = 'Hello', ...otherStuff: string[]): string => {
   console.log(otherStuff);
   return word;
 };
 
 sayWord('Sean', 'Wes');
+
+// Implicit types:
+// Typescript infers type.
+let newName: string | number | boolean = 'Sean Swan';
+newName = 'Cinder Momo';
+// newName = 2;
+// newName = false;
+// console.log(newName);
+
+// Gets implicit type from the variables first declaration.
+// Getting value from latest newName
+let newNameTwo = newName;
+// newNameTwo = 10;
+
+// Union types with | split between multiple types
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}px`;
+};
+
+makeMargin(10);
+makeMargin('10');
+makeMargin(false);
+
+// Null types
+
+let cat: string | null = 'Snowy';
+cat = null;
+cat = 'Snowy';
+cat = undefined;
+cat = 12;
+cat = false;
